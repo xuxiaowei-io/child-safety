@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xuxiaowei-io.github.io/child-safety/sitemap.xml

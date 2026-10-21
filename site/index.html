@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论坛坞（ForumDock）儿童安全标准 · Child Safety Standards</title>
+<meta name="description" content="论坛坞（ForumDock）针对儿童性虐待和性剥削（CSAE）的防范、举报与处置标准。ForumDock child safety standards against CSAE and CSAM.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://xuxiaowei-io.github.io/child-safety/">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0b57d0">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="论坛坞 ForumDock">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://xuxiaowei-io.github.io/child-safety/">
+<meta property="og:title" content="论坛坞（ForumDock）儿童安全标准">
+<meta property="og:description" content="针对儿童性虐待和性剥削（CSAE）的防范、举报与处置标准。Standards for preventing, reporting and addressing CSAE.">
+<meta property="og:image" content="https://xuxiaowei-io.github.io/child-safety/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="论坛坞（ForumDock）儿童安全标准">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="论坛坞（ForumDock）儿童安全标准">
+<meta name="twitter:description" content="针对儿童性虐待和性剥削（CSAE）的防范、举报与处置标准。">
+<meta name="twitter:image" content="https://xuxiaowei-io.github.io/child-safety/assets/og.png">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f6f8fb;
+    --fg: #1b1f24;
+    --fg-muted: #5b6470;
+    --line: #e3e7ec;
+    --brand: #0b57d0;
+    --brand-soft: #eef4ff;
+    --warn: #b3261e;
+    --radius: 14px;
+    --max: 820px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101317;
+      --bg-soft: #171b21;
+      --fg: #e8eaed;
+      --fg-muted: #9aa3ae;
+      --line: #2a3038;
+      --brand: #8ab4f8;
+      --brand-soft: #16233a;
+      --warn: #f2b8b5;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+  .site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    max-width: var(--max); margin: 0 auto; padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .mark {
+    width: 34px; height: 34px; flex: none; border-radius: 10px;
+    display: block; object-fit: cover;
+  }
+  .brand-name { font-weight: 650; font-size: 15px; letter-spacing: .2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand-name span { color: var(--fg-muted); font-weight: 450; }
+  .lang-switch { display: flex; gap: 4px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-soft); flex: none; }
+  .lang-switch button {
+    appearance: none; border: 0; background: transparent; color: var(--fg-muted);
+    font: inherit; font-size: 13px; line-height: 1; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] { background: var(--bg); color: var(--fg); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+
+  main { max-width: var(--max); margin: 0 auto; padding: 56px 24px 24px; }
+  .doc[hidden] { display: none; }
+
+  .eyebrow { margin: 0 0 14px; color: var(--brand); font-size: 13px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(32px, 5vw, 44px); line-height: 1.2; letter-spacing: -.02em; font-weight: 750; }
+  .subtitle { margin: 14px 0 0; font-size: 18px; line-height: 1.6; color: var(--fg-muted); max-width: 46em; }
+  .meta { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; padding: 0; }
+  .meta li {
+    font-size: 13px; color: var(--fg-muted);
+    border: 1px solid var(--line); background: var(--bg-soft);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap;
+  }
+
+  .lede { margin: 34px 0 0; padding: 22px 24px; border-left: 4px solid var(--brand); background: var(--brand-soft); border-radius: 0 var(--radius) var(--radius) 0; }
+  .lede p { margin: 0; font-size: 16px; }
+  .lede strong { font-weight: 700; }
+
+  .toc { margin: 36px 0 8px; padding: 20px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); }
+  .toc-title { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-muted); }
+  .toc ol { margin: 0; padding: 0; list-style: none; display: grid; grid-auto-flow: column; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); gap: 4px 24px; counter-reset: toc; }
+  .toc li { counter-increment: toc; font-size: 14px; }
+  .toc li a { color: var(--fg); display: inline-block; padding: 3px 0; }
+  .toc li a::before { content: counter(toc) ". "; color: var(--fg-muted); }
+
+  article section { padding: 34px 0 0; }
+  article h2 {
+    margin: 0 0 12px; padding-top: 26px; border-top: 1px solid var(--line);
+    font-size: 21px; line-height: 1.4; letter-spacing: -.01em; font-weight: 700;
+  }
+  article h2 .num { color: var(--fg-muted); font-weight: 600; margin-right: 10px; font-variant-numeric: tabular-nums; }
+  article p { margin: 0 0 14px; }
+  article ul, article ol { margin: 0 0 14px; padding-left: 1.35em; }
+  article li { margin: 6px 0; }
+  article li::marker { color: var(--fg-muted); }
+  article strong { font-weight: 680; }
+
+  .contact { margin: 18px 0 6px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .contact dl { margin: 0; display: grid; grid-template-columns: 140px 1fr; }
+  .contact dt, .contact dd { margin: 0; padding: 13px 18px; border-top: 1px solid var(--line); }
+  .contact dt { color: var(--fg-muted); font-size: 14px; background: var(--bg-soft); }
+  .contact dd { font-size: 15px; overflow-wrap: anywhere; }
+  .contact dt:first-of-type, .contact dd:first-of-type { border-top: 0; }
+
+  .emergency { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); border-color: color-mix(in srgb, var(--warn) 35%, var(--line)); background: color-mix(in srgb, var(--warn) 7%, var(--bg)); }
+  .emergency p { margin: 0; font-size: 15px; }
+
+  footer { max-width: var(--max); margin: 0 auto; padding: 48px 24px 64px; border-top: 1px solid var(--line); color: var(--fg-muted); font-size: 13px; }
+  footer p { margin: 4px 0; }
+  footer .mark { width: 22px; height: 22px; border-radius: 6px; display: inline-block; vertical-align: -5px; margin-right: 8px; }
+
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--bg); color: var(--fg); padding: 10px 16px; border: 1px solid var(--line); border-radius: 8px; z-index: 20; }
+  .skip:focus { left: 16px; top: 12px; }
+
+  @media (max-width: 640px) {
+    main { padding-top: 36px; }
+    .bar { padding: 10px 18px; }
+    .toc ol { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+    .contact dl { grid-template-columns: 1fr; }
+    .contact dt { padding-bottom: 2px; }
+    .contact dd { padding-top: 4px; }
+    .lede { padding: 18px; }
+  }
+  @media print {
+    .site-header, .toc, .skip { display: none; }
+    body { background: #fff; color: #000; }
+    main { padding: 0; max-width: none; }
+    article h2 { page-break-after: avoid; }
+    a { color: #000; text-decoration: underline; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+
+<header class="site-header">
+  <div class="bar">
+    <div class="brand">
+      <img class="mark" src="assets/app-icon-96.png" width="34" height="34" alt="" aria-hidden="true">
+      <span class="brand-name">论坛坞 <span>ForumDock</span></span>
+    </div>
+    <div class="lang-switch" role="group" aria-label="语言 / Language">
+      <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+      <button type="button" id="btn-en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 中文 -->
+  <div class="doc" lang="zh-CN" id="doc-zh">
+    <p class="eyebrow">儿童安全 · Child Safety</p>
+    <h1>儿童安全标准</h1>
+    <p class="subtitle">针对儿童性虐待和性剥削（CSAE）的防范、举报与处置标准</p>
+    <ul class="meta">
+      <li>版本 1.0</li>
+      <li>生效日期 2026-10-21</li>
+      <li>Android · HarmonyOS · iOS</li>
+      <li>论坛坞 ForumDock</li>
+    </ul>
+
+    <div class="lede">
+      <p><strong>零容忍。</strong>论坛坞不容忍任何形式的儿童性虐待和性剥削（CSAE）。确认涉及儿童性虐待材料（CSAM）的内容，会在 24 小时内在应用内被阻断，并依法上报主管机关。</p>
+    </div>
+
+    <nav class="toc" aria-label="目录">
+      <p class="toc-title">目录</p>
+      <ol>
+        <li><a href="#zh-1">目的与适用范围</a></li>
+        <li><a href="#zh-2">零容忍</a></li>
+        <li><a href="#zh-3">定义</a></li>
+        <li><a href="#zh-4">禁止的内容与行为</a></li>
+        <li><a href="#zh-5">我们的防范措施</a></li>
+        <li><a href="#zh-6">举报渠道</a></li>
+        <li><a href="#zh-7">处置流程</a></li>
+        <li><a href="#zh-8">与执法机构合作</a></li>
+        <li><a href="#zh-9">儿童安全联系人</a></li>
+        <li><a href="#zh-10">政策更新</a></li>
+        <li><a href="#zh-11">其他说明</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="zh-1">
+        <h2><span class="num">01</span>目的与适用范围</h2>
+        <p>本标准说明论坛坞（下称「本应用」）如何防范、发现、举报和处置儿童性虐待和性剥削（Child Sexual Abuse and Exploitation，CSAE）内容与行为，包括儿童性虐待材料（Child Sexual Abuse Material，CSAM）。本标准适用于我们在各应用商店提供的全部客户端，以及通过应用内渠道提交的任何举报。</p>
+        <p>论坛坞是面向 Discourse 论坛的第三方客户端。论坛内容（话题、帖子、图片、附件、私信）由各论坛运营方存储与管理，我们不是这些内容的发布者或托管方。即便如此，我们仍对本应用呈现的内容承担以下责任：不主动传播、不推荐、不放大此类内容；保持举报渠道畅通；在收到举报后尽快阻断应用内访问；并依法向有关机构报告。</p>
+        <p>我们遵守适用的儿童安全法律法规，以及 Google Play、华为应用市场（AppGallery）等各应用商店的儿童安全政策。</p>
+      </section>
+
+      <section id="zh-2">
+        <h2><span class="num">02</span>零容忍</h2>
+        <p>我们对 CSAM 以及任何形式的儿童性剥削零容忍。无论内容来自我们预置的论坛，还是用户自行添加的论坛，只要确认涉及 CSAM，我们都会立即在应用内阻断，并依法向主管机关报告；情节严重的站点会被永久列入应用内黑名单。</p>
+      </section>
+
+      <section id="zh-3">
+        <h2><span class="num">03</span>定义</h2>
+        <ul>
+          <li><strong>儿童</strong>：未满 18 周岁的任何人（与联合国《儿童权利公约》口径一致）。</li>
+          <li><strong>CSAE（儿童性虐待和性剥削）</strong>：对儿童实施或利用儿童进行的性虐待、性剥削行为，包括但不限于制作、传播、索取、交易 CSAM，性引诱（grooming），性勒索（sextortion），以及以性为目的的人口贩运。</li>
+          <li><strong>CSAM（儿童性虐待材料）</strong>：以任何媒介形式描绘儿童性虐待或性剥削的内容，包括照片、视频、计算机生成影像、文字描写与音频。</li>
+        </ul>
+      </section>
+
+      <section id="zh-4">
+        <h2><span class="num">04</span>禁止的内容与行为</h2>
+        <p>在本应用内（包括通过本应用访问、展示或提交的任何内容）严格禁止：</p>
+        <ol>
+          <li>制作、复制、传播、索取、出售、购买或持有 CSAM；</li>
+          <li>对儿童实施性引诱、性勒索、性剥削，或以性为目的贩运儿童；</li>
+          <li>将儿童性化、美化、正常化，或以「二次元」「AI 生成」等名义规避上述禁令；</li>
+          <li>以链接、暗语、二维码、群组邀请等任何方式引导他人获取上述内容；</li>
+          <li>冒充未成年人，或利用未成年人身份接触儿童以实施上述行为；</li>
+          <li>为上述行为提供教程、招募、「资源」分享或其他便利。</li>
+        </ol>
+      </section>
+
+      <section id="zh-5">
+        <h2><span class="num">05</span>我们的防范措施</h2>
+        <ol>
+          <li><strong>产品边界</strong>：当前版本仅提供浏览、搜索、消息与个人资料，不提供发帖、回帖与互动（点赞、回应）功能。本应用不生成、不存储用户发布的内容，正文与图片均来自论坛服务器。</li>
+          <li><strong>不做推荐</strong>：没有信息流推荐，没有陌生人推荐，没有广告，也没有面向儿童的内容分区；用户看到的内容取决于其主动添加并选择的论坛。</li>
+          <li><strong>站点来源核查</strong>：预置论坛经人工确认；用户自行添加的站点由其自行判断与负责。我们会对公开举报集中的域名进行复核，确认后从应用内移除。</li>
+          <li><strong>目标受众与分级</strong>：本应用不以儿童为目标受众，并按 Google Play、华为应用市场等各商店的要求完成内容分级、目标受众声明与年龄标注。</li>
+          <li><strong>数据最小化</strong>：登录使用论坛官方的用户 API 密钥，本应用不保存账号密码；不建立独立的用户画像，不收集与儿童安全无关的个人数据。</li>
+          <li><strong>持续巡检</strong>：结合用户举报、公开信息与关键词复核，持续更新应用内黑名单与处置记录。</li>
+        </ol>
+      </section>
+
+      <section id="zh-6">
+        <h2><span class="num">06</span>举报渠道</h2>
+        <p>如果你在本应用中看到疑似 CSAM 或任何危害儿童的内容，请立即通过以下任一渠道举报：</p>
+        <ol>
+          <li><strong>电子邮件（推荐）</strong>：<a href="mailto:xuxiaowei@xuxiaowei.com.cn?subject=%E5%84%BF%E7%AB%A5%E5%AE%89%E5%85%A8%E4%B8%BE%E6%8A%A5%20Child%20Safety%20Report">xuxiaowei@xuxiaowei.com.cn</a>，主题请注明「儿童安全举报」。我们会在 1 个工作日内确认收到。</li>
+          <li><strong>应用内</strong>：「我的」→「关于」→「问题反馈」，注明「儿童安全」。请只描述论坛域名与话题标题，不要上传或粘贴涉嫌违规的图片、视频或直链；如需匿名或保密，请使用上面的邮箱。</li>
+          <li><strong>论坛侧</strong>：使用内容所在论坛自带的举报 / 标记功能，或该论坛公布的联系方式。论坛运营方是内容的第一责任方，删除内容与封禁账号由其执行。</li>
+          <li><strong>紧急情况</strong>：如果存在现实中的儿童危险，请直接联系当地警方（中国大陆 110）或其他执法机构，不要等待我们的回复。</li>
+        </ol>
+        <p>举报时请尽量提供：应用版本与平台、论坛域名、话题或帖子的链接（或截图）、内容出现的时间，以及你的联系方式（可选）。你可以匿名举报；我们不会因善意举报对你采取任何不利措施，并会对举报人身份保密。</p>
+      </section>
+
+      <section id="zh-7">
+        <h2><span class="num">07</span>处置流程</h2>
+        <ol>
+          <li><strong>受理与分级</strong>：1 个工作日内确认收到并完成初步分级；涉及儿童现实危险的，立即处理。</li>
+          <li><strong>核实</strong>：确认内容所在位置、来源论坛与当前可访问性。</li>
+          <li><strong>阻断</strong>：确认后 24 小时内，在应用内屏蔽相关内容或整个站点，并通知论坛运营方要求删除。</li>
+          <li><strong>上报</strong>：依法向主管机关报告，包括但不限于美国国家失踪与受虐儿童中心（NCMEC，通过 CyberTipline）、中国大陆公安机关与网信部门，以及内容所在司法辖区的相应机构。对已确认的 CSAM，我们不会只做删除而不上报。</li>
+          <li><strong>留存</strong>：在符合法律的前提下保留必要的举报与处置记录，用于配合调查；我们不下载、不复制、不转发 CSAM。</li>
+          <li><strong>复盘</strong>：更新黑名单与复核规则，必要时调整产品功能，并在本页更新处置口径。</li>
+        </ol>
+      </section>
+
+      <section id="zh-8">
+        <h2><span class="num">08</span>与执法机构合作</h2>
+        <p>我们依法配合执法机关和儿童保护机构的调查，包括在合法请求下提供所掌握的账号、日志与举报记录。我们不会为规避监管而转移、篡改或删除相关证据。</p>
+      </section>
+
+      <section id="zh-9">
+        <h2><span class="num">09</span>儿童安全联系人</h2>
+        <div class="contact">
+          <dl>
+            <dt>姓名</dt><dd>徐晓伟（开发者）</dd>
+            <dt>邮箱</dt><dd><a href="mailto:xuxiaowei@xuxiaowei.com.cn">xuxiaowei@xuxiaowei.com.cn</a></dd>
+            <dt>职责</dt><dd>负责本标准的执行、举报受理与对外沟通，了解 CSAM 防范实践与相关法律义务。</dd>
+            <dt>响应时间</dt><dd>1 个工作日内确认；涉及儿童现实危险的举报优先处理。</dd>
+          </dl>
+        </div>
+        <div class="emergency">
+          <p><strong>紧急情况：</strong>如果儿童正面临现实危险，请立即拨打当地报警电话（中国大陆 110），并同时抄送上述邮箱。</p>
+        </div>
+      </section>
+
+      <section id="zh-10">
+        <h2><span class="num">10</span>政策更新</h2>
+        <p>我们至少每年复核一次本标准，并在产品功能、法律要求或商店政策发生重大变化时更新。更新后的版本在本页发布并标注生效日期；重大变更会在应用内公告。</p>
+      </section>
+
+      <section id="zh-11">
+        <h2><span class="num">11</span>其他说明</h2>
+        <ul>
+          <li>本应用不面向儿童设计，也不以儿童为目标受众。</li>
+          <li>本应用是第三方客户端，与所访问论坛的运营方没有隶属关系；论坛内容与版权归原作者及论坛所有。</li>
+          <li>本标准不排除、也不限制任何司法辖区法律赋予儿童的保护，以及我们依法应承担的报告义务。</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+
+  <!-- English -->
+  <div class="doc" lang="en" id="doc-en" hidden>
+    <p class="eyebrow">Child Safety · 儿童安全</p>
+    <h1>Child Safety Standards</h1>
+    <p class="subtitle">Standards for preventing, reporting and addressing child sexual abuse and exploitation (CSAE)</p>
+    <ul class="meta">
+      <li>Version 1.0</li>
+      <li>Effective 21 Oct 2026</li>
+      <li>Android · HarmonyOS · iOS</li>
+      <li>ForumDock</li>
+    </ul>
+
+    <div class="lede">
+      <p><strong>Zero tolerance.</strong> ForumDock does not tolerate child sexual abuse and exploitation (CSAE) in any form. Content confirmed to be child sexual abuse material (CSAM) is blocked in the app within 24 hours and reported to the competent authorities as required by law.</p>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#en-1">Purpose and scope</a></li>
+        <li><a href="#en-2">Zero tolerance</a></li>
+        <li><a href="#en-3">Definitions</a></li>
+        <li><a href="#en-4">Prohibited content and conduct</a></li>
+        <li><a href="#en-5">Prevention measures</a></li>
+        <li><a href="#en-6">How to report</a></li>
+        <li><a href="#en-7">Response process</a></li>
+        <li><a href="#en-8">Cooperation with law enforcement</a></li>
+        <li><a href="#en-9">Point of contact</a></li>
+        <li><a href="#en-10">Policy updates</a></li>
+        <li><a href="#en-11">Other statements</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="en-1">
+        <h2><span class="num">01</span>Purpose and scope</h2>
+        <p>These standards describe how ForumDock (the “app”) prevents, detects, reports and responds to child sexual abuse and exploitation (CSAE), including child sexual abuse material (CSAM). They apply to every client we publish on any app store, and to any report submitted through our in-app channels.</p>
+        <p>ForumDock is a third-party client for Discourse forums. Forum content (topics, posts, images, attachments and private messages) is stored and managed by each forum’s operator; we are neither the publisher nor the host of that content. We nevertheless take responsibility for what the app surfaces: we do not promote, recommend or amplify such content, we keep reporting channels open, we block in-app access as soon as we receive a report, and we report to the competent authorities as required by law.</p>
+        <p>We comply with applicable child safety laws and with the child safety policies of Google Play, AppGallery and the other stores we publish on.</p>
+      </section>
+
+      <section id="en-2">
+        <h2><span class="num">02</span>Zero tolerance</h2>
+        <p>We have zero tolerance for CSAM and for any form of child sexual exploitation. Whether content comes from a forum we ship by default or from a forum a user added themselves, once it is confirmed to involve CSAM we block it in the app immediately and report it to the competent authorities; sites that seriously violate this standard are permanently blacklisted in the app.</p>
+      </section>
+
+      <section id="en-3">
+        <h2><span class="num">03</span>Definitions</h2>
+        <ul>
+          <li><strong>Child</strong>: any person under the age of 18, consistent with the UN Convention on the Rights of the Child.</li>
+          <li><strong>CSAE (child sexual abuse and exploitation)</strong>: sexual abuse or exploitation of, or involving, a child, including producing, distributing, soliciting or trading CSAM, grooming, sextortion, and trafficking for sexual purposes.</li>
+          <li><strong>CSAM (child sexual abuse material)</strong>: any material that depicts child sexual abuse or exploitation in any medium, including photographs, videos, computer-generated imagery, written descriptions and audio.</li>
+        </ul>
+      </section>
+
+      <section id="en-4">
+        <h2><span class="num">04</span>Prohibited content and conduct</h2>
+        <p>The following are strictly prohibited in the app, including in any content accessed, displayed or submitted through it:</p>
+        <ol>
+          <li>Producing, copying, distributing, soliciting, selling, buying or possessing CSAM;</li>
+          <li>Grooming, sextorting or sexually exploiting a child, or trafficking a child for sexual purposes;</li>
+          <li>Sexualising, glorifying or normalising children, including under the guise of “anime” or “AI-generated” content;</li>
+          <li>Directing others to such content by any means, including links, code words, QR codes or group invitations;</li>
+          <li>Impersonating a minor, or using a minor’s identity to contact children for the purposes above;</li>
+          <li>Providing tutorials, recruitment, “resource” sharing or any other facilitation of the above.</li>
+        </ol>
+      </section>
+
+      <section id="en-5">
+        <h2><span class="num">05</span>Prevention measures</h2>
+        <ol>
+          <li><strong>Product boundaries</strong>: the current version offers browsing, search, messages and profiles only. It does not offer posting, replying or social interactions (likes, reactions). The app does not create or store user-published content; post bodies and images are served by the forums.</li>
+          <li><strong>No recommendations</strong>: there is no feed recommendation, no stranger recommendation, no advertising and no child-facing content section. What a user sees depends on the forums the user has added and selected.</li>
+          <li><strong>Site review</strong>: forums we ship by default are reviewed manually; sites added by users are the user’s own choice and responsibility. We review domains that attract public reports and remove them from the app once confirmed.</li>
+          <li><strong>Audience and ratings</strong>: the app is not directed to children. We complete content rating, target-audience declarations and age labels as required by Google Play, AppGallery and other stores.</li>
+          <li><strong>Data minimisation</strong>: sign-in uses the forum’s official user API key; the app never stores account passwords. We do not build independent user profiles or collect personal data unrelated to child safety.</li>
+          <li><strong>Ongoing review</strong>: we continuously update our in-app blacklist and handling records based on user reports, public information and keyword review.</li>
+        </ol>
+      </section>
+
+      <section id="en-6">
+        <h2><span class="num">06</span>How to report</h2>
+        <p>If you see suspected CSAM or any content that harms children in the app, report it immediately through any of the following:</p>
+        <ol>
+          <li><strong>Email (preferred)</strong>: <a href="mailto:xuxiaowei@xuxiaowei.com.cn?subject=Child%20Safety%20Report">xuxiaowei@xuxiaowei.com.cn</a> with the subject “Child Safety Report”. We acknowledge receipt within one business day.</li>
+          <li><strong>In the app</strong>: Me → About → Feedback, marked “child safety”. Please describe only the forum domain and topic title — do not upload or paste the suspected media or direct links. Use the email above if you need to stay anonymous or confidential.</li>
+          <li><strong>On the forum</strong>: use the report/flag feature of the forum hosting the content, or the contact details that forum publishes. The forum operator is the primary party responsible for the content and carries out removal and account suspension.</li>
+          <li><strong>Emergency</strong>: if a child is in immediate danger, contact your local police (110 in mainland China) or another law-enforcement agency directly instead of waiting for our reply.</li>
+        </ol>
+        <p>Please include, where possible: app version and platform, forum domain, a link to the topic or post (or a screenshot), when the content appeared, and your contact details (optional). You may report anonymously. We will not take any action against you for a good-faith report, and we keep reporters’ identities confidential.</p>
+      </section>
+
+      <section id="en-7">
+        <h2><span class="num">07</span>Response process</h2>
+        <ol>
+          <li><strong>Intake and triage</strong>: acknowledge within one business day and triage; reports involving immediate danger to a child are handled at once.</li>
+          <li><strong>Verification</strong>: confirm where the content is, which forum hosts it, and whether it is currently reachable.</li>
+          <li><strong>Blocking</strong>: within 24 hours of confirmation, block the content or the entire site in the app, and notify the forum operator to remove it.</li>
+          <li><strong>Reporting</strong>: report to the competent authorities as required by law, including but not limited to the National Center for Missing &amp; Exploited Children (NCMEC, via its CyberTipline), the public security and cyberspace authorities in mainland China, and the relevant bodies in the jurisdiction where the content is hosted. Confirmed CSAM is never merely removed without being reported.</li>
+          <li><strong>Retention</strong>: keep the minimum reports and handling records needed to assist investigations, in accordance with law. We do not download, copy or forward CSAM.</li>
+          <li><strong>Review</strong>: update the blacklist and review rules, adjust product features where necessary, and update this page.</li>
+        </ol>
+      </section>
+
+      <section id="en-8">
+        <h2><span class="num">08</span>Cooperation with law enforcement</h2>
+        <p>We cooperate with law-enforcement and child-protection investigations as required by law, including providing account, log and report records we hold in response to lawful requests. We do not move, alter or delete evidence to evade regulatory oversight.</p>
+      </section>
+
+      <section id="en-9">
+        <h2><span class="num">09</span>Child safety point of contact</h2>
+        <div class="contact">
+          <dl>
+            <dt>Name</dt><dd>Xiaowei Xu (developer)</dd>
+            <dt>Email</dt><dd><a href="mailto:xuxiaowei@xuxiaowei.com.cn">xuxiaowei@xuxiaowei.com.cn</a></dd>
+            <dt>Role</dt><dd>Responsible for implementing these standards, handling reports and external communication; familiar with CSAM prevention practices and the relevant legal obligations.</dd>
+            <dt>Response</dt><dd>Acknowledgement within one business day; reports involving immediate danger to a child take priority.</dd>
+          </dl>
+        </div>
+        <div class="emergency">
+          <p><strong>Emergency:</strong> if a child is in immediate danger, call your local emergency number (110 in mainland China) and copy the email above.</p>
+        </div>
+      </section>
+
+      <section id="en-10">
+        <h2><span class="num">10</span>Policy updates</h2>
+        <p>We review these standards at least once a year, and update them when our product, legal requirements or store policies change materially. Updated versions are published on this page with an effective date; material changes are announced in the app.</p>
+      </section>
+
+      <section id="en-11">
+        <h2><span class="num">11</span>Other statements</h2>
+        <ul>
+          <li>The app is not designed for, or directed to, children.</li>
+          <li>The app is a third-party client and is not affiliated with the operators of the forums it accesses; forum content and copyright belong to the original authors and the forums.</li>
+          <li>These standards do not exclude or limit any protection afforded to children by the law of any jurisdiction, or any reporting obligation we bear under law.</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+
+</main>
+
+<footer>
+  <p><img class="mark" src="assets/app-icon-96.png" width="22" height="22" alt="" aria-hidden="true">论坛坞 ForumDock · 儿童安全标准 Child Safety Standards</p>
+  <p>版本 Version 1.0 · 生效 Effective 2026-10-21 · <a href="mailto:xuxiaowei@xuxiaowei.com.cn">xuxiaowei@xuxiaowei.com.cn</a></p>
+</footer>
+
+<script>
+(function () {
+  var zh = document.getElementById('doc-zh');
+  var en = document.getElementById('doc-en');
+  var btnZh = document.getElementById('btn-zh');
+  var btnEn = document.getElementById('btn-en');
+
+  function apply(lang) {
+    var isZh = lang === 'zh';
+    zh.hidden = !isZh;
+    en.hidden = isZh;
+    btnZh.setAttribute('aria-pressed', String(isZh));
+    btnEn.setAttribute('aria-pressed', String(!isZh));
+    document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+  }
+
+  btnZh.addEventListener('click', function () { apply('zh'); });
+  btnEn.addEventListener('click', function () { apply('en'); });
+
+  var initial = (navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  if (location.hash === '#en') initial = 'en';
+  if (location.hash === '#zh') initial = 'zh';
+  apply(initial);
+})();
+</script>
+</body>
+</html>
